@@ -1,0 +1,298 @@
+/* Общие стили для формы */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F4F7FB; /* светлый нейтральный фон */
+    color: #333333; /* темный текст для контраста */
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Контейнер для всех страниц */
+.container {
+    width: 100%;
+    max-width: 800px; /* увеличен размер контейнера */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFFFFF; /* светлый фон */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+h2 {
+    color: #4A90E2; /* темный цвет для заголовка */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Стили для групп ввода */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="date"],
+textarea {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px; /* округлые края */
+    border: 1px solid #555555; /* более темная рамка для полей ввода */
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    background-color: #63576e; /* темный фон для полей ввода */
+    color: #e6e6e6; /* светлый текст */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: #BB86FC; /* светлый фиолетовый при фокусе */
+    outline: none;
+    box-shadow: 0 0 5px rgba(187, 134, 252, 0.5);
+}
+
+/* Чекбокс и метка */
+.form-group input[type="checkbox"] {
+    margin-right: 10px; /* отступ между чекбоксом и меткой */
+    transform: scale(1.3); /* увеличиваем размер чекбокса */
+}
+
+.form-group label {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Кнопки */
+button,
+a.logout-btn {
+    background: linear-gradient(135deg, #3700B3, #03DAC5); /* новый градиент */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+    width: auto; /* кнопки не на всю ширину */
+    display: inline-block;
+    text-align: center;
+}
+
+/* Эффект при наведении на кнопки */
+button:hover,
+a.logout-btn:hover {
+    background: linear-gradient(135deg, #03DAC5, #3700B3); /* Инвертируем градиент при наведении */
+    transform: translateY(-3px);
+}
+
+/* Эффект при нажатии */
+button:active,
+a.logout-btn:active {
+    transform: translateY(1px);
+    background: linear-gradient(135deg, #03DAC5, #3700B3);
+}
+
+/* Стили для ссылки "Отмена" */
+.cancel-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4A90E2;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.cancel-link:hover {
+    color: #357ABD;
+}
+
+/* Сообщение об ошибке */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Темная тема */
+body.dark-theme {
+    background-color: #484747; /* Очень темный фон для лучшего контраста */
+    color: #E0E0E0; /* Светлый текст для контраста */
+}
+
+/* Заголовки и акценты */
+body.dark-theme h2 {
+    color: #BB86FC; /* Светлый фиолетовый для заголовков */
+}
+
+body.dark-theme a, .theme-toggle {
+    color: #BB86FC; /* Светлый фиолетовый для ссылок и кнопок */
+}
+
+body.dark-theme a:hover, .theme-toggle:hover {
+    color: #3700B3; /* Более насыщенный фиолетовый при наведении */
+}
+
+/* Стиль для таблицы */
+body.dark-theme table {
+    background-color: #1E1E1E; /* Темный фон таблицы */
+    color: #E0E0E0; /* Светлый текст */
+}
+
+body.dark-theme th {
+    background-color: #333333; /* Тёмный фон для заголовков */
+    color: #BB86FC; /* Светлый фиолетовый для заголовков */
+}
+
+body.dark-theme td {
+    background-color: #272727; /* Темный фон ячеек */
+    color: #E0E0E0; /* Светлый текст */
+}
+
+/* Формы и кнопки */
+body.dark-theme .form-group input[type="email"],
+body.dark-theme .form-group input[type="password"],
+body.dark-theme .form-group input[type="text"],
+body.dark-theme .form-group textarea {
+    background-color: #63576e; /* темный фон для полей ввода */
+    color: #E0E0E0; /* светлый текст в полях */
+    border: 1px solid #555555; /* более темная рамка для полей */
+}
+
+body.dark-theme .form-group input[type="email"]:focus,
+body.dark-theme .form-group input[type="password"]:focus,
+body.dark-theme .form-group input[type="text"]:focus,
+body.dark-theme .form-group textarea:focus {
+    border-color: #BB86FC; /* светлый фиолетовый при фокусе */
+    box-shadow: 0 0 5px rgba(187, 134, 252, 0.5);
+}
+
+body.dark-theme button {
+    background: linear-gradient(135deg, #3700B3, #03DAC5); /* Синий/Бирюзовый градиент */
+}
+
+body.dark-theme button:hover {
+    background: linear-gradient(135deg, #03DAC5, #3700B3); /* Инвертируем градиент при наведении */
+}
+
+/* Кнопка смены темы */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4A90E2; /* синий фон */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    z-index: 1000; /* чтобы кнопка была на переднем плане */
+}
+
+.theme-toggle:hover {
+    background-color: #357ABD; /* темный синий при наведении */
+}
+
+/* Основной стиль таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Заголовки таблицы */
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #DDDDDD; /* светлая граница */
+    font-size: 14px;
+}
+
+/* Стиль для таблицы в светлой теме */
+body table {
+    background-color: #FFFFFF; /* белый фон для таблицы */
+}
+
+body table th {
+    background-color: #F2F4F8; /* светлый фон заголовков */
+    color: #4A90E2; /* синий для заголовков */
+    font-weight: bold;
+}
+
+body table td {
+    color: #333333; /* темный текст в ячейках */
+}
+
+/* Для каждой строки таблицы */
+tr:nth-child(even) {
+    background-color: #F9F9F9; /* светлый фон для четных строк */
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFF; /* белый фон для нечетных строк */
+}
+
+/* Эффект при наведении на строку */
+tr:hover {
+    background-color: #E1E8F0; /* светлый акцент при наведении */
+}
+
+/* Пагинация (если есть) */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.pagination a:hover {
+    background-color: #357ABD;
+}
+
+.pagination a.active {
+    background-color: #357ABD;
+}
+
+/* Сообщение об ошибке */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
