@@ -3,7 +3,6 @@ $host = 'localhost';
 $username = 'root';
 $password = 'root';
 $database = 'todo_app';
-
 $conn = new mysqli($host, $username, $password, $database);
 
 // Проверка на ошибки соединения

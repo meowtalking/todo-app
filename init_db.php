@@ -1,10 +1,10 @@
 <?php
 $host = 'localhost';
 $user = 'root';
-$password = '';
+$password = 'root';
 $dbname = 'todo-app';
 
-// Подключение к MySQL (без выбора базы)
+// Шаг 1: Подключение к MySQL без выбора базы данных
 $conn = new mysqli($host, $user, $password);
 
 // Проверка соединения
@@ -12,13 +12,13 @@ if ($conn->connect_error) {
     die('Ошибка подключения: ' . $conn->connect_error);
 }
 
-// Создание базы данных, если не существует
+// Шаг 2: Создание базы данных, если она не существует
 $conn->query("CREATE DATABASE IF NOT EXISTS `$dbname`");
 
-// Подключение к нужной базе
+// Шаг 3: Переключение на эту базу
 $conn->select_db($dbname);
 
-// Создание таблиц, если не существуют
+// Шаг 4: Создание таблицы пользователей
 $conn->query("
     CREATE TABLE IF NOT EXISTS users (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -27,6 +27,7 @@ $conn->query("
     )
 ");
 
+// Шаг 5: Создание таблицы задач
 $conn->query("
     CREATE TABLE IF NOT EXISTS tasks (
         id INT AUTO_INCREMENT PRIMARY KEY,
